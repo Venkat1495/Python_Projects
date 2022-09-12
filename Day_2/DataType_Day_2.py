@@ -34,3 +34,13 @@ for i in two_digit_number:
     final_digit = final_digit + int(digit_x)
 
 print(final_digit)
+
+# Mathematical Operations
+
+# 3 + 4
+# 5 - 7
+# 8 * 5
+print(6 / 2) # it will float always
+print(6 ** 2)
+
+# PEMDAS (), **, *, /, +, -
