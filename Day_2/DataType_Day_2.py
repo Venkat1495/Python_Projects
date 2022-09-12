@@ -44,3 +44,13 @@ print(6 / 2) # it will float always
 print(6 ** 2)
 
 # PEMDAS (), **, *, /, +, -
+
+# BMI Calucator
+
+height = float(input("enter your height in m: "))
+weight = float(input("enter your weight in kg: "))
+
+BMI = weight / (height ** 2)
+BMI = round(BMI)
+
+print(BMI)
