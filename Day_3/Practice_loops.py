@@ -10,4 +10,11 @@ else:
 
 # Weather number input is odd or even
 
-number = int(input(""))
+number = int(input("Which number do you want to check?\n"))
+
+number_remainder = number % 2
+
+if number_remainder == 0 :
+    print("this is an even number.")
+elif number_remainder == 1 :
+    print("this is an odd number.")
