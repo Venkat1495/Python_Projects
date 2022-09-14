@@ -21,6 +21,9 @@ if height >= 120 :
     elif (age >= 12 and age <=18) :
         price = 7
         print(f"you have to pay ${price} for ticket")
+    elif age >= 45 and age <= 55:
+        price = 0
+        print(f"you have to pay ${price} for ticket")
     elif age > 18 :
         price = 12
         print(f"you have to pay ${price} for ticket")
