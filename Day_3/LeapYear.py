@@ -68,3 +68,35 @@ if extra_cheese == "Y" :
     Final_price += 1
 
 print(f"Your final bill is : {Final_price}")
+
+# Love Calculator
+
+print("Welcome to the Love Calculator!")
+
+name_one = input("What is you name ?\n").upper()
+name_two = input("What is their name ?\n").upper()
+
+name = name_one + name_two
+
+int_true = 0
+
+int_true += name.count("T")
+int_true += name.count("R")
+int_true += name.count("U")
+int_true += name.count("E")
+
+int_love = 0
+
+int_love += name.count("L")
+int_love += name.count("O")
+int_love += name.count("V")
+int_love += name.count("E")
+
+Final_love = int(str(int_true) + str(int_love))
+
+if Final_love < 10 or Final_love > 90 :
+    print(f"Your score is {Final_love}, you to together like coke and mentos")
+elif Final_love >= 40 and Final_love <= 50 :
+    print(f"Your score is {Final_love}, you are alright together")
+else:
+    print(f"Your score is {Final_love}.")
