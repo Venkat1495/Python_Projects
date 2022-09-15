@@ -50,3 +50,12 @@ length = len(name)
 
 random_name = random.randint(1,length) - 1
 print(f"You are going to pay the bill : {name[random_name]}")
+
+# Near Hundred
+
+num = int(input("Please enter the any random number : "))
+
+if (num >= 90 and num <= 110) or (num >= 190 and num <= 210) :
+    print("true")
+else:
+    print("false")
