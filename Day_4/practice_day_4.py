@@ -25,3 +25,28 @@ if toss == "y" :
 else:
     print("Thanks for showing interest")
 
+# List
+
+fruits = ["apple", "cherry", "Pear"]
+print(fruits)
+fruits[1] = "Banana"
+print(fruits)
+fruits.append("cherry")
+print(fruits)
+
+# Nester Lists
+
+vegetables = ["Spinach", "Kale", "Tomtoes", "Celery"]
+
+dirty_frozen = [fruits,vegetables]
+
+print(dirty_frozen)
+
+# Bill Paying person
+
+name_str = input("Give me everybody's names, seperated by a comma.")
+name = name_str.split(", ")
+length = len(name)
+
+random_name = random.randint(1,length) - 1
+print(f"You are going to pay the bill : {name[random_name]}")
