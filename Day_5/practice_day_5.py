@@ -4,6 +4,14 @@ def forlearn() :
     for i in fruit :
         print(i)
 
+    number = 0
+
+    for n in range(0,101, 1) :
+        number += n
+
+    print(number)
+
+
 def average_height() :
     student_h = input("Input a list of student heights ").split()
     i = 0
@@ -32,6 +40,6 @@ def max_score() :
 
 
 # My function calling
-# forlearn()
-#average_height()
-max_score()
+forlearn()
+# average_height()
+# max_score()
