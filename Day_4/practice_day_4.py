@@ -59,3 +59,23 @@ if (num >= 90 and num <= 110) or (num >= 190 and num <= 210) :
     print("true")
 else:
     print("false")
+
+
+# Treasure Map -- learing about the neasted lists
+
+row1 = ["🖖","🖖","🖖"]
+row2 = ["🖖","🖖","🖖"]
+row3 = ["🖖","🖖","🖖"]
+
+map = [row1, row2, row3]
+
+print(f"{row1}\n{row2}\n{row3}")
+
+position = input("where do you want to put the treasure? \n")
+
+position_cl = int(position[0]) - 1
+position_rw = int(position[1]) - 1
+
+map[position_rw][position_cl] = "X"
+
+print(f"{row1}\n{row2}\n{row3}")
