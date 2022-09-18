@@ -10,6 +10,13 @@ def forlearn() :
         number += n
 
     print(number)
+    total_even = 0
+    for n in range(0,101, 1) :
+        if (n % 2) == 0 :
+            total_even += n
+
+    print(total_even)
+
 
 
 def average_height() :
