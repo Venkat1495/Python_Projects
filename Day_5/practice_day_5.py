@@ -45,8 +45,23 @@ def max_score() :
 
     print(f"The highest score in the clase is: {i_max}")
 
+def fizzbuzz() :
+    fizz = "Fizz"
+    buzz = "buzz"
+    fizzbuzz_s = "FizzBuzz"
+    number = 1
+    for n in range(1, 101, 1) :
+        if (n % 3 == 0) and (n % 5 == 0) :
+            print(fizzbuzz_s)
+        elif n % 3 == 0 :
+            print(fizz)
+        elif n % 5 == 0 :
+            print(buzz)
+        else:
+            print(n)
 
 # My function calling
-forlearn()
+# forlearn()
 # average_height()
 # max_score()
+fizzbuzz()
