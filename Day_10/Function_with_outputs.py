@@ -1,13 +1,15 @@
 def format_name(f_name, l_name):
+    """It takes first and last name, and returns them in the Tittle format"""
     f_name = f_name.title()
     l_name = l_name.title()
     return f"{f_name} {l_name}"
-#f_name = input("Please type your first name: ")
-#l_name = input("Please type your last name: ")
-#full_name = format_name(f_name, l_name)
-#print(full_name)
+f_name = input("Please type your first name: ")
+l_name = input("Please type your last name: ")
+full_name = format_name(f_name, l_name)
+print(full_name)
 
 def is_leap(year):
+    """Returns whether the passed year is leap year or not"""
     year #= int(input("Which year do you want to check?"))
 
     if year % 4 == 0 and year % 100 == 0 and year % 400 == 0:
@@ -31,3 +33,6 @@ year = int(input("Enter a year: "))
 month = int(input("Enter a month: "))
 days = days_in_month(year, month)
 print(days)
+
+# DoStrings : it is definition of a function displayed when we call the function. and it is defined the first function
+
