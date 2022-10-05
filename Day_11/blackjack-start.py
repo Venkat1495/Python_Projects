@@ -1,4 +1,6 @@
 ############### Blackjack Project #####################
+import random
+from art import logo
 
 #Difficulty Normal 😎: Use all Hints below to complete the project.
 #Difficulty Hard 🤔: Use only Hints 1, 2, 3 to complete the project.
@@ -51,4 +53,85 @@
 
 #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
 
-#Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
+#Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.t
+def list_add(user_cards):
+    score = 0
+    for i in user_cards:
+        score += i
+    return score
+
+def list_ace(user_cards):
+    for i in user_cards:
+        if i == 11 :
+            index = user_cards.index(i)
+            user_cards[index] = 1
+    return user_cards
+def final_print(my_cards, com_cards):
+    my_score = list_add(my_cards)
+    com_score = list_add(com_cards)
+    print(f"Your final hand: {my_cards}, final score: {my_score}")
+    print(f"Computer's final hand: {com_cards}, final score: {com_score}")
+
+def BalckJack():
+    is_true = True
+
+    while is_true:
+        yes = input("Do you want to play a game of Blackjack? Type 'y' or 'n':")
+        if yes == 'y':
+            is_true = True
+        else:
+            break
+        print(logo)
+        cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+        my_cards = []
+        com_cards = []
+        my_cards.append(random.choice(cards))
+        my_cards.append(random.choice(cards))
+        com_cards.append(random.choice(cards))
+        com_cards.append(random.choice(cards))
+        my_score = list_add(my_cards)
+        print(f"Your cards: {my_cards}, Current Score: {my_score}")
+        print(f"Computer's first card : {com_cards[0]}")
+        while True:
+            another = input("Type 'y' to get another card, type 'n' to pass: ")
+            if another == 'y':
+                my_cards.append(random.choice(cards))
+                my_score = list_add(my_cards)
+                if my_score <= 21:
+                    print(f"Your cards: {my_cards}, Current Score: {my_score}")
+                    continue
+                else:
+                    my_cards = list_ace(my_cards)
+                    my_score = list_add(my_cards)
+                    if my_score > 21 :
+                        break
+                    elif my_score <= 21:
+                        print(f"We changed your Ace card as it exceed score and Your cards: {my_cards}, Current Score: {my_score}")
+                        continue
+            else:
+                break
+        if my_score > 21 :
+            final_print(my_cards,com_cards)
+            print("You went over. You LOSE 😤")
+            continue
+        com_score = list_add(com_cards)
+        while com_score <= 16:
+            com_cards.append(random.choice(cards))
+            com_score = list_add(com_cards)
+        if com_score > 21 :
+            final_print(my_cards,com_cards)
+            print("Computer went over. So You WIN")
+            continue
+        if my_score > com_score:
+            print("You WIN!!!")
+        elif my_score < com_score:
+            print("you LOSE 😤")
+        elif my_score == com_score:
+            print("you DRAW!!!!")
+
+
+BalckJack()
+
+
+
+
