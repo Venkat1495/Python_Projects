@@ -56,12 +56,17 @@ def re_check(user_bew):
         print("Sorry there is not enough Water")
         return False
 
+
+
 def update_res(user_req):
     menu_choosie = MENU[user_req]["ingredients"]
     resources["water"] -= menu_choosie["water"]
     resources["milk"] -= menu_choosie["milk"]
     resources["coffee"] -= menu_choosie["coffee"]
     resources["money"] += MENU[user_req]["cost"]
+
+# TODO 5. Process coins.
+# TODO 6. Check transaction successful?
 
 
 def coins(user_req):
@@ -100,7 +105,7 @@ while True:
         is_true = coins(user_req)
         if not is_true:
             break
-    # TODO 5. Process coins.
 
-    # TODO 6. Check transaction successful?
+
+
     # TODO 7. Make Coffee.
