@@ -43,6 +43,7 @@ def random_color():
 tim.shape("arrow")
 tim.speed("fastest")
 for i in range(0, 360, 5):
+    print(type(random_color()))
     tim.color(random_color())
     tim.setheading(i)
     tim.circle(100)
