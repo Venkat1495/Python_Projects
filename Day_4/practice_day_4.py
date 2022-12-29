@@ -73,8 +73,8 @@ print(f"{row1}\n{row2}\n{row3}")
 
 position = input("where do you want to put the treasure? \n")
 
-position_cl = int(position[0]) - 1
-position_rw = int(position[1]) - 1
+position_cl = int(position[1]) - 1
+position_rw = int(position[0]) - 1
 
 map[position_rw][position_cl] = "X"
 
